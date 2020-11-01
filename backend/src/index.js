@@ -11,7 +11,7 @@ app.post("/projects", (request, response) => {
   return response.json(["Project 1", "Project 2", "Project 3"]);
 });
 
-app.put("/projcts/:id", (request, response) => {
+app.put("/projects/:id", (request, response) => {
   return response.json(["Project 4", "Project 2", "Project 3"]);
 });
 
