@@ -2,6 +2,10 @@ import React, { useState } from "react";
 
 import Header from "./components/Header";
 
+import "./App.css";
+
+import backgroundImage from "./assets/car.jpeg";
+
 function App() {
   const [projects, setProjects] = useState([
     "Development app",
@@ -15,6 +19,8 @@ function App() {
   return (
     <>
       <Header title="Projects" />
+
+      <img width={300} src={backgroundImage} alt="" />
 
       <ul>
         {projects.map((project) => {
