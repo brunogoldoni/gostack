@@ -1,5 +1,9 @@
 import { v4 as uuid } from 'uuid';
 
+interface AppointmentConstructor {
+  provider: string;
+  date: Date;
+}
 class Appointment {
   id: string;
 
@@ -7,7 +11,7 @@ class Appointment {
 
   date: Date;
 
-  constructor(provider: string, date: Date) {
+  constructor({ provider, date }: Omit<Appointment, 'id'>) {
     this.provider = provider;
     this.date = date;
     this.id = uuid();
