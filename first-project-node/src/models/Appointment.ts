@@ -1,9 +1,5 @@
 import { v4 as uuid } from 'uuid';
 
-interface AppointmentConstructor {
-  provider: string;
-  date: Date;
-}
 class Appointment {
   id: string;
 
