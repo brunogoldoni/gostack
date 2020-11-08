@@ -20,7 +20,7 @@ class User {
   @Column()
   password: string;
 
-  @Column('time without time zone')
+  @Column('timestamp without time zone')
   date: Date;
 
   @CreateDateColumn()
