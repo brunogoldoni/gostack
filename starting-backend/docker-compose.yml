@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  db_postgres:
+    networks:
+      - network
+    restart: on-failure
+    image: postgres:12.1-alpine
+    container_name: 'gostack_gobarber'
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD:docker
+      - POSTGRES_DB=gostack_gobarber
+    volumes:
+      - './database/postgres:/var/lib/postgresql/data'
+    ports:
+      - 5432:5432
+
+  api_node:
+    build: .
+    networks:
+      - network
+    links:
+      - db_postgres
+    depends_on:
+      - db_postgres
+    container_name: 'starting_backend'
+    volumes:
+      - .:/usr/app
+    ports:
+      - 3333:3333
+    command: 'sh /usr/app/start.sh'
+
+networks:
+  network:
