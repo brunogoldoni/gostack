@@ -20,6 +20,9 @@ class User {
   @Column()
   password: string;
 
+  @Column()
+  avatar: string;
+
   @Column('timestamp without time zone')
   date: Date;
 
