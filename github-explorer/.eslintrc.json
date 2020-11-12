@@ -30,6 +30,7 @@
   ],
   "rules": {
     "import/no-extraneous-dependencies": "off",
+    "react/jsx-one-expression-per-line": "off",
     "camelcase": "off",
     "prettier/prettier": "error",
     "@typescript-eslint/explicit-module-boundary-types": "off",
