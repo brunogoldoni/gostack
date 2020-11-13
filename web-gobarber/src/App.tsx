@@ -1,9 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return <h1>Hello GoStack... </h1>;
-}
+const App: React.FC = () => {
+  return <h1>Hello GoBarber...</h1>;
+};
 
 export default App;
