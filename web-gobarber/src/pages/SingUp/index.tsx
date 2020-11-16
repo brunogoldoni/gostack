@@ -12,7 +12,7 @@ import Button from '../../components/Button';
 import { Container, Content, Background } from './styles';
 
 const SignUp: React.FC = () => {
-  const handleSubmit = useCallback(async async (data: object) => {
+  const handleSubmit = useCallback(async (data: object) => {
     console.log(data);
 
     try {
@@ -22,11 +22,12 @@ const SignUp: React.FC = () => {
           .required('E-mail obrigatório')
           .email('Digite um e-mail válido'),
         passowrd: Yup.string()
-          .min(6, 'No mínimo 6 dígitos'),
+          .min(6, 'No mínimo 6 dígitos')
+          .required('Senha obrigatória'),
       });
 
       await schema.validate(data, {
-        abortEarly: false
+        abortEarly: false,
       });
     } catch (err) {
       console.log(err);
