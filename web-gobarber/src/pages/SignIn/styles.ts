@@ -59,5 +59,6 @@ export const Content = styled.div`
 
 export const Background = styled.div`
   background: url(${SignInBackgroundImg}) no-repeat center;
+  background-size: cover;
   flex: 1;
 `;
