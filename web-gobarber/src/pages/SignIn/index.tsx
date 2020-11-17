@@ -6,7 +6,7 @@ import * as Yup from 'yup';
 
 import { FiLogIn, FiMail, FiLock } from 'react-icons/fi';
 
-import { useAuth } from '../../context/AuthContext';
+import { useAuth } from '../../hooks/AuthContext';
 import getValidationErrors from '../../utils/getValidationErrors';
 
 import logoImg from '../../assets/logo.svg';
